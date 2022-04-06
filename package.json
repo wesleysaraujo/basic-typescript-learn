@@ -1,0 +1,30 @@
+{
+  "name": "typescript-tips",
+  "version": "1.0.0",
+  "description": "Typescript tip & lessons",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "tsc && node ./dist/main.js",
+    "dev": "nodemon --watch 'src/' --exec 'tsc' -e ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesleysaraujo/basic-typescript-learn"
+  },
+  "keywords": [
+    "typescript",
+    "js",
+    "javascript",
+    "webdevelopment"
+  ],
+  "author": "Wesley Serafim <wsadesigner@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesleysaraujo/basic-typescript-learn/issues"
+  },
+  "homepage": "https://github.com/wesleysaraujo/basic-typescript-learn#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
