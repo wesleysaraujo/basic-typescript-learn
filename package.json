@@ -4,7 +4,7 @@
   "description": "Typescript tip & lessons",
   "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tsc && jest ./dist/tests",
     "ts": "tsc && node ./dist/main.js",
     "dev": "nodemon --watch 'src/' --exec 'tsc' -e ts"
   },
@@ -26,5 +26,9 @@
   "homepage": "https://github.com/wesleysaraujo/basic-typescript-learn#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1"
   }
 }

@@ -1,36 +1,40 @@
-interface AnimalInterface {    
-    getSpecie(): string;
-    getSound(): string;
+interface AnimalInterface {  
+    get species(): string;
+    get sound(): string;
 }
 
-interface QuadrupedeInterface {
-    getQuantityPaws(): number
+interface QuadrupedInterface {
+    get quantityPaws(): number
 }
 
-class AnimalMamal implements AnimalInterface, QuadrupedeInterface {
-    private specie:string
+type AnimalType = AnimalInterface & QuadrupedInterface;
 
-    private sound: string
+class AnimalMamal implements AnimalInterface, QuadrupedInterface
+{
+    private _species:string
 
-    constructor(specie: string, sound: string) {
-        this.specie = specie
-        this.sound = sound
+    private _sound: string
+
+    constructor(species: string, sound: string) {
+        this._species = species
+        this._sound = sound
     }
     
-    getSpecie(): string {
-        return this.specie
+    get species(): string {
+        return this._species
     }
 
-    getSound(): string {
-        return this.sound
+    get sound(): string {
+        return this._sound
     }
 
-    getQuantityPaws(): number {
+    get quantityPaws(): number {
         return 4
     }
 }
 
 const cat: AnimalMamal = new AnimalMamal('cat', 'miau')
 
-console.log(`The animal is ${cat.getSpecie()}`)
-console.log(`The ${cat.getSpecie()} sound is ${cat.getSound()}`)
+console.log(`The animal is ${cat.species}`)
+console.log(`The ${cat.species} sound is ${cat.sound}`)
+console.log(`The ${cat.species} has ${cat.quantityPaws} paws`)
